@@ -6,7 +6,7 @@ import json
 from click import prompt
 
 # API_URL = "https://api.openai.com/v1/chat/completions"  # 替换为实际的 API URL
-API_KEY = "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"  # 替换为你的 API 密钥
+API_KEY = "******"  # 替换为你的 API 密钥
 
 prompt ={
     "role": "user",
