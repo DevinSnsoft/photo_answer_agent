@@ -1,7 +1,7 @@
 api_key:
-  gpt4o_key: "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"
-  asr_key: "sk-bf7ce3e6467743919b0e228e9d556862"
-  tts_key: "sk-bf7ce3e6467743919b0e228e9d556862"
+  gpt4o_key: "******"
+  asr_key: "******"
+  tts_key: "******"
 
 services:
   kuangtu: "https://zhixingyun.yuntim.com/func/direction_detection_service"

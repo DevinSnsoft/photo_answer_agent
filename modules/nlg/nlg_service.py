@@ -5,17 +5,14 @@ import requests
 import yaml
 from httpx import stream
 
-# def load_config(file_path):
-#     with open(file_path, 'r') as file:
-#         config = yaml.safe_load(file)  # 安全地加载 YAML 文件
-#     return config
-#
-# config = load_config(os.getcwd() + '\\config.yml')
-# openai_api_key = config['api_key']['gpt4o_key']
-# kuangtu_service = config['services']['kuangtu']
+def load_config(file_path):
+    with open(file_path, 'r') as file:
+        config = yaml.safe_load(file)  # 安全地加载 YAML 文件
+    return config
 
-openai_api_key = "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"
-kuangtu_service = "https://zhixingyun.yuntim.com/func/direction_detection_service"
+config = load_config(os.getcwd() + '\\config.yml')
+openai_api_key = config['api_key']['gpt4o_key']
+kuangtu_service = config['services']['kuangtu']
 
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
