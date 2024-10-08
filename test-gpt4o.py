@@ -4,7 +4,7 @@ import gradio as gr
 import os
 
 # OpenAI API Key
-api_key = '******'
+api_key = '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'
 
 def encode_image(image_path):
     # 将二进制数据（图片内容）编码为 base64

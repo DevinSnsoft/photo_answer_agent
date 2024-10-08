@@ -18,7 +18,7 @@ def encode_image(image_path):
   with open(image_path, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
 
-def nlg_service(text, image_path, history):
+def nlg_service(text, image_path):
     payload = {"data":json.dumps({"url":image_path})}
     headers = {
         'User-Agent': 'Apifox/1.0.0 (https://apifox.com)',
@@ -65,7 +65,7 @@ def nlg_service(text, image_path, history):
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
         if response.status_code == 200:
-            return response.json()['choices'][0]['message']['content'], history
+            return response.json()['choices'][0]['message']['content']
         else:
             print("多模态信息处理任务响应异常，请重新发送请求！")
     else:
